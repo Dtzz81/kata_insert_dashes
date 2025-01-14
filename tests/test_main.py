@@ -80,3 +80,11 @@ def test_long_number():
     result = insert_dashes(original_digits)
 
     assert expected == result
+
+def test_one_digit():
+    original_digits = 1
+
+    expected = "1"
+    result = insert_dashes(original_digits)
+
+    assert expected == result
