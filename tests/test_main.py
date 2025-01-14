@@ -48,3 +48,11 @@ def test_three_digits_odd_odd_even():
     result = insert_dashes(original_digits)
 
     assert expected == result
+
+def test_three_digits_odd_odd_odd():
+    original_digits = 557
+
+    expected = "5-5-7"
+    result = insert_dashes(original_digits)
+
+    assert expected == result
