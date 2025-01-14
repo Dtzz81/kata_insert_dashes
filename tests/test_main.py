@@ -26,3 +26,12 @@ def test_insert_dash_between_another_two_odds():
     result = insert_dashes(original_digits)
     #assert
     assert expected == result
+
+def test_odd_even_only():
+    #act
+    original_digits = 52
+    #arrange
+    expected = "52"
+    result = insert_dashes(original_digits)
+    #assert
+    assert expected == result
