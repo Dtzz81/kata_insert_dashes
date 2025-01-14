@@ -72,3 +72,11 @@ def test_all_odd_four_digits():
     result = insert_dashes(original_digits)
 
     assert expected == result
+
+def test_long_number():
+    original_digits = 1012356895
+
+    expected = "10123-5689-5"
+    result = insert_dashes(original_digits)
+
+    assert expected == result
