@@ -8,7 +8,12 @@ def insert_dashes(num: int) -> str:
                 if len(num_to_str) < 3:
                     return f"{i}-{num_to_str[1:]}"
                 elif int(num_to_str[2]) % 2 == 1:
-                    return f"{i}-{num_to_str[1]}-{num_to_str[2:]}"
+                    if len(num_to_str) < 4:
+                        return f"{i}-{num_to_str[1]}-{num_to_str[2:]}"
+                    elif int(num_to_str[3]) % 2 == 1:
+                        return f"{i}-{num_to_str[1]}-{num_to_str[2]}-{num_to_str[3:]}"
+                    else:
+                        return f"{i}-{num_to_str[1]}-{num_to_str[2:]}"
                 else:
                     return f"{i}-{num_to_str[1:]}"
 

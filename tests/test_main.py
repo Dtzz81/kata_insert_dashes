@@ -64,3 +64,11 @@ def test_four_digits():
     result = insert_dashes(original_digits)
 
     assert expected == result
+
+def test_all_odd_four_digits():
+    original_digits = 5571
+
+    expected = "5-5-7-1"
+    result = insert_dashes(original_digits)
+
+    assert expected == result
