@@ -1,4 +1,4 @@
-from source.main import insert_dashes
+from source.main import insert_asterisks, insert_dashes
 
 def test_no_even__nor_odd_digits_next_to_each_other():
     #act
@@ -86,5 +86,15 @@ def test_one_digit():
 
     expected = "1"
     result = insert_dashes(original_digits)
+
+    assert expected == result
+
+#odd digits done
+
+def test_two_even_digits_only():
+    original_digits = 22
+
+    expected = "2*2"
+    result = insert_asterisks(original_digits)
 
     assert expected == result
