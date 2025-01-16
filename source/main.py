@@ -14,11 +14,15 @@ def insert_dashes(num: int) -> str:
 def insert_asterisks(num: int) -> str:
     num_to_str = str(num)
 
-    for i in num_to_str:
-        if int(i) % 2 == 0:
-            if int(num_to_str[1]) % 2 == 0:
-                return  f"{i}*{num_to_str[1]}"
-        return num_to_str
+    result = num_to_str[0]
+
+    for i in num_to_str[1:]:
+        if int(i) % 2 == 0 and int(result[-1]) % 2 == 0:
+            result += '*' + i
+        else:
+            result += i
+
+    return result
 
     # for i in num_to_str[1:]:
     #     if int(i) % 2 == 1:
