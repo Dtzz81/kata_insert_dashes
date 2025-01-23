@@ -131,11 +131,14 @@ def test_one_digit():
 
     assert expected == result
 
+# even numbers done
+
 
 def test_four_digits():
     original_digits = 2233
 
     expected = "2*23-3"
-    result = insert_asterisks(original_digits) 
+    first_result = insert_dashes(original_digits)
+    result = insert_asterisks(first_result)
 
     assert expected == result
